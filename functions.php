@@ -52,7 +52,7 @@ if ( ! function_exists( 'tribe_dance_setup' ) ) {
         register_nav_menus(
             array(
                 'primary' => esc_html__( 'Primary Menu', 'tribedance' ),
-                // 'footer'  => __( 'Secondary menu', 'tribedance' ),
+                'footer'  => __( 'Footer Menu', 'tribedance' ),
             )
         );
 
@@ -145,3 +145,6 @@ function twenty_twenty_one_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
+
+
+add_filter( 'show_admin_bar' , '__return_false' );
