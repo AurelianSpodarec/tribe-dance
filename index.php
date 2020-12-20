@@ -70,13 +70,19 @@
                         <?php $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "size" ); ?>
 			 
                           <?php 
-                                blogExcerpt(
-                                    $thumbnail[0],
-                                    get_the_date(),
-                                    get_the_title(), 
-                                    get_the_excerpt(),  
-                                    get_permalink(), 
-                                );   
+                                // blogExcerpt(
+                                //     $thumbnail[0],
+                                //     get_the_date(),
+                                //     get_the_title(), 
+                                //     get_the_excerpt(),  
+                                //     get_permalink(), 
+                                // );   
+
+
+                                blogExcerpt([
+                                    'title' => get_the_title()
+                                ]);
+                          
                             ?>
                         
                         <?php endwhile; ?>
