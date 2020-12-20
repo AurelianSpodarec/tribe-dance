@@ -35,8 +35,8 @@
 
 
     <section>
-        <div>
-            <h2>Featured</h2>
+        <div class="text-center">
+            <?php sectionTitle("Featured"); ?>
         </div>
 
         <div class="container mx-auto">
@@ -49,11 +49,11 @@
     </section>
 
     <section>
-        <div>
-            <h2>Featured</h2>
+        <div class="text-center">
+            <?php sectionTitle("Blog"); ?>
         </div>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto xxxl">
             <div class="flex flex-wrap">
 
                
@@ -85,7 +85,6 @@
                       <?php else : ?>
                         <p><?php __('No News'); ?></p>
                       <?php endif; ?>
-                ?>
                  
             </div>
         </div>

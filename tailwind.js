@@ -19,6 +19,13 @@ module.exports = {
                     'hover': '#63b3ed',
                 }
             },
+            screens: {
+                sm: '640px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+                xxxl: '1820px',
+            },
             fontSize: {
                 xxs: '0.675rem',
             },

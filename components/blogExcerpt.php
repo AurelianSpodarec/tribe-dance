@@ -3,7 +3,7 @@
 
 function blogExcerpt($thumbnail = "", $date = "", $title = "", $excerpt = "", $permalink = "") {
     $html = <<<"EOT"
-    <div class="w-1/2 lg:w-1/3 rounded overflow-hidden px-2 mb-8">
+    <div class="w-1/2 lg:w-1/3 rounded overflow-hidden px-2 mb-8 bg-gray-100 hover:bg-pink-100 cursor-pointer">
         <div>
             <img src="$thumbnail" />
         </div>
