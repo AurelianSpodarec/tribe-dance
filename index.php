@@ -1,7 +1,6 @@
+
 <?php
-
-
-get_header();
+    get_header();
 ?>
 
     <div  class="h-full" style="height: 100vh;">
@@ -43,33 +42,55 @@ get_header();
         <div class="container mx-auto">
             <div class="flex flex-wrap">
 
-                <a href="" class="w-1/2 lg:w-1/4 rounded overflow-hidden px-2 mb-8">
-                    <img src="https://cdn.shopify.com/s/files/1/2301/3747/products/91V_MC_Cover_Art-min_large.png?v=1596147687" />
-                    <p>MISSED CALLS: MIDNIGHT SOUL<p>
-                    <p>£35.00</p>
-                </a>
+                <?php vocalSampleExcerpt(); vocalSampleExcerpt(); vocalSampleExcerpt(); vocalSampleExcerpt(); ?>
 
-                <a href="" class="w-1/2 lg:w-1/4 rounded overflow-hidden px-2 mb-8">
-                    <img src="https://cdn.shopify.com/s/files/1/2301/3747/products/91V_MC_Cover_Art-min_large.png?v=1596147687" />
-                    <p>MISSED CALLS: MIDNIGHT SOUL<p>
-                    <p>£35.00</p>
-                </a>
+            </div>
+        </div>
+    </section>
 
-                <a href="" class="w-1/2 lg:w-1/4 rounded overflow-hidden px-2 mb-8">
-                    <img src="https://cdn.shopify.com/s/files/1/2301/3747/products/91V_MC_Cover_Art-min_large.png?v=1596147687" />
-                    <p>MISSED CALLS: MIDNIGHT SOUL<p>
-                    <p>£35.00</p>
-                </a>
+    <section>
+        <div>
+            <h2>Featured</h2>
+        </div>
 
-                <a href="" class="w-1/2 lg:w-1/4 rounded overflow-hidden px-2 mb-8">
-                    <img src="https://cdn.shopify.com/s/files/1/2301/3747/products/91V_MC_Cover_Art-min_large.png?v=1596147687" />
-                    <p>MISSED CALLS: MIDNIGHT SOUL<p>
-                    <p>£35.00</p>
-                </a>
+        <div class="container mx-auto">
+            <div class="flex flex-wrap">
 
+               
+                <?php 
+
+                    $the_query = new WP_Query( array(
+                        // 'category_name' => 'news',
+                        'posts_per_page' => 3,
+                    )); 
+                    
+                     if ( $the_query->have_posts() ) : ?>
+                        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                        <?php $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "size" ); ?>
+			 
+                          <?php 
+                                blogExcerpt(
+                                    $thumbnail[0],
+                                    get_the_date(),
+                                    get_the_title(), 
+                                    get_the_excerpt(),  
+                                    get_permalink(), 
+                                );   
+                            ?>
+                        
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                      
+                      <?php else : ?>
+                        <p><?php __('No News'); ?></p>
+                      <?php endif; ?>
+                ?>
+                 
             </div>
         </div>
     </section>
 
 <?php 
 get_footer();
+
