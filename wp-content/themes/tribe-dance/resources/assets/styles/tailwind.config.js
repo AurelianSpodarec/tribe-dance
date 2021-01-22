@@ -9,6 +9,12 @@ module.exports = {
       letterSpacing: {
         three: '3px',
       },
+      screens: {
+        '3xl': '1820px',
+      },
+      maxWidth: {
+        'max-w-screen-3xl': '1820px',
+      },
     },
   },
   variants: {

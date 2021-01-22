@@ -14,12 +14,19 @@
 {{--      @include('partials.content-'.get_post_type())--}}
 {{--    @endwhile--}}
 
-    @while ($query_blog_posts->have_posts()) @php $query_blog_posts->the_post() @endphp
-    {{-- @include('partials.content-'.get_post_type()) --}}
+    <div class="flex">
+      @while ($query_blog_posts->have_posts()) @php $query_blog_posts->the_post() @endphp
+        @blogExcerpt1([
+        'title' => get_the_title(),
+        'excerpt' => get_the_excerpt(),
+        'date' => get_the_date(),
+        'permalink' => get_the_permalink(),
+        'thumbnail' => get_the_post_thumbnail_url(),
+        ])
+        @endblogExcerpt
+      @endwhile
+    </div>
 
-      @blogExcerpt(['title' => the_title()])
-      @endblogExcerpt
-    @endwhile
 
   {!! get_the_posts_navigation() !!}
 @endsection
