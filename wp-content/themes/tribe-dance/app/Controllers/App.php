@@ -11,6 +11,21 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function currentYear()
+    {
+        return date("Y");
+    }
+
+    public function queryBlogPosts() {
+        $args = [
+            // 'post_type' => 'posts',
+            'posts_per_page' => 3,
+        ];
+
+        $query = new \Wp_Query($args);
+        return $query;
+    }
+
     public static function title()
     {
         if (is_home()) {
