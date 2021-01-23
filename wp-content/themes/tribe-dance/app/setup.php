@@ -130,8 +130,8 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
-
-    sage('blade')->compiler()->component('components.vocal-sample', 'vocalSample');
+    sage('blade')->compiler()->component('components.block', 'block');
     sage('blade')->compiler()->component('components.blog-excerpt', 'blogExcerpt');
     sage('blade')->compiler()->component('components.blog-excerpt-1', 'blogExcerpt1');
+    sage('blade')->compiler()->component('components.vocal-sample', 'vocalSample');
 });

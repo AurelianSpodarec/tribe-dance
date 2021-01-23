@@ -4,8 +4,7 @@
 
 
             <a class="brand mr-10" href="<?php echo e(home_url('/')); ?>">
-                <img width="100px"
-                     src="https://cdn.shopify.com/s/files/1/2301/3747/t/3/assets/logo.png?v=15904693863245551424"/>
+                <img width="100px" src="https://cdn.shopify.com/s/files/1/2301/3747/t/3/assets/logo.png?v=15904693863245551424"/>
             </a>
 
 
