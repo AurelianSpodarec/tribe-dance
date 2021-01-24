@@ -9,10 +9,10 @@
 
         <div class="table-cell align-middle">
 
-            <h3 class="font-bold text-4xl">
+            <h3 class="font-bold text-4xl mb-8">
                 <a href="">SAD GIRL: ALT POP</a>
             </h3>
-            <p>Veiled in melancholy, Sad Girl: Alt Pop explores the dark gritty electro landscape popularised by artists such as Billie Eilish, Lorde and Halsey. Delivering a modern take on contemporary pop, with a rich pallet of moody lyrics, vocal & melodic loops, grungy synths, bouncing 808s and resampled drum and percussion.</p>
+            <p class="mb-6">Veiled in melancholy, Sad Girl: Alt Pop explores the dark gritty electro landscape popularised by artists such as Billie Eilish, Lorde and Halsey. Delivering a modern take on contemporary pop, with a rich pallet of moody lyrics, vocal & melodic loops, grungy synths, bouncing 808s and resampled drum and percussion.</p>
             <button>
                 Find Out More
             </button>
