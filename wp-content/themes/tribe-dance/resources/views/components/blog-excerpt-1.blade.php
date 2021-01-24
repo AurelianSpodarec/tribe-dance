@@ -1,5 +1,6 @@
 <div class="w-1/2 lg:w-1/3 rounded overflow-hidden mb-8 bg-gray-100 hover:bg-pink-200 cursor-pointer">
-    <a href="{{ $permalink }}">
+<a href="{{ $permalink }}">
+
     <div>
         <img class="object-cover w-full" style="max-height: 300px; min-height: 100px;" src="{{ $thumbnail }}"/>
     </div>
@@ -10,5 +11,6 @@
         <p class="mb-3 text-sm">{{ $excerpt }}</p>
         <a class="underline font-bold text-xs uppercase tracking-three" href="{{ $permalink }}">Read More</a>
     </div>
-    </a>
+
+</a>
 </div>
