@@ -26,6 +26,17 @@ class App extends Controller
         return $query;
     }
 
+    public function BlogQueryBlogPosts() {
+        $args = [
+            // 'post_type' => 'posts',
+            'posts_per_page' => 10,
+        ];
+
+        $query = new \Wp_Query($args);
+        return $query;
+    }
+
+
     public static function title()
     {
         if (is_home()) {

@@ -1,9 +1,8 @@
 <?php $__env->startSection('content'); ?>
 
-
     <section class="container mx-auto px-16">
         <div class="flex gap-12">
-            <?php while($BLOGqueryBlogPosts->have_posts()): ?> <?php $BLOGqueryBlogPosts->the_post() ?>
+            <?php while($blog_query_blog_posts->have_posts()): ?> <?php $blog_query_blog_posts->the_post() ?>
             <?php $__env->startComponent('components.blog-excerpt-1', [
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),

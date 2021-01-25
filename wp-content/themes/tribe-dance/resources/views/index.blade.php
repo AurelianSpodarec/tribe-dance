@@ -89,7 +89,7 @@
             'permalink' => get_the_permalink(),
             'thumbnail' => get_the_post_thumbnail_url(),
         ])
-        @endblogExcerpt
+        @endblogExcerpt1
         @endwhile
         </div>
     </section>

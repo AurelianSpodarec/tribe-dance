@@ -8,7 +8,7 @@ class Blog extends Controller
 {
 
 
-    public function BLOGqueryBlogPosts() {
+    public function BlogQueryBlogPosts() {
         $args = [
             // 'post_type' => 'posts',
             'posts_per_page' => 10,

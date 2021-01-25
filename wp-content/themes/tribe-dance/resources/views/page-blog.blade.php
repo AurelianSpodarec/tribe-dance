@@ -2,10 +2,9 @@
 
 @section('content')
 
-
     <section class="container mx-auto px-16">
         <div class="flex gap-12">
-            @while ($BLOGqueryBlogPosts->have_posts()) @php $BLOGqueryBlogPosts->the_post() @endphp
+            @while ($blog_query_blog_posts->have_posts()) @php $blog_query_blog_posts->the_post() @endphp
             @blogExcerpt1([
                 'title' => get_the_title(),
                 'excerpt' => get_the_excerpt(),
@@ -13,7 +12,7 @@
                 'permalink' => get_the_permalink(),
                 'thumbnail' => get_the_post_thumbnail_url(),
             ])
-            @endblogExcerpt
+            @endblogExcerpt1
             @endwhile
         </div>
     </section>
