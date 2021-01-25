@@ -10,7 +10,7 @@
 {{--    @endif--}}
 
     <section class="relative mb-20">
-        <div class="h-screen object-cover w-full" style="background-image: url(https://cdn.shopify.com/s/files/1/2301/3747/files/794368794399217904859144399669693251784154149923_2048x2048.jpg?v=1596150179)">
+        <div class="h-screen object-cover w-full bg-center bg-no-repeat bg-cover" style="background-image: url(https://cdn.shopify.com/s/files/1/2301/3747/files/794368794399217904859144399669693251784154149923_2048x2048.jpg?v=1596150179)">
 
             <div class="h-full table mx-auto text-center">
             <div class="table-cell align-middle" style="max-width: 829px;">
