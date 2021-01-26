@@ -1,7 +1,6 @@
 <?php $__env->startSection('content'); ?>
 
-    <section class="container mx-auto px-16">
-        <div class="flex flex-nowrap">
+
         <div class="w-3/4 flex flex-wrap gap-12 ">
             <?php while($blog_query_blog_posts->have_posts()): ?> <?php $blog_query_blog_posts->the_post() ?>
             <?php $__env->startComponent('components.blog-excerpt', [
