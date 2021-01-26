@@ -28,8 +28,13 @@
 
 
     <section class="container mx-auto px-16 mb-24">
+        @sectionTitle(
+        [ 'title' => 'LATEST RELEASE' ]
+        ) @endsectionTitle
+
          @block([
-            'title' => 'SAD GIRL: ALT POP'
+            'title' => 'SAD GIRL: ALT POP',
+            'excerpt' => "Veiled in melancholy, Sad Girl: Alt Pop explores the dark gritty electro landscape popularised by artists such as Billie Eilish, Lorde and Halsey. Delivering a modern take on contemporary pop, with a rich pallet of moody lyrics, vocal & melodic loops, grungy synths, bouncing 808s and resampled drum and percussion."
         ])
         @endblock
     </section>

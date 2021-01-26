@@ -137,7 +137,7 @@ add_action('after_setup_theme', function () {
     //
 
     sage('blade')->compiler()->component('objects.button', 'button');
-
+    sage('blade')->compiler()->component('objects.sectionTitle', 'sectionTitle');
 
 
     //
