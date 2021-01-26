@@ -38,7 +38,9 @@
 
 
     <section class="container mx-auto px-16 mb-24">
+        <?php $__env->startComponent('objects.sectionTitle', [ 'title' => 'Featured' ]); ?> <?php echo $__env->renderComponent(); ?>
     <div class="flex gap-12 ">
+
 
         <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
         <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
@@ -81,7 +83,10 @@
 
 
     <section class="container mx-auto px-16">
-        <div class="flex gap-12">
+
+        <?php $__env->startComponent('objects.sectionTitle', [ 'title' => 'Blog' ]); ?> <?php echo $__env->renderComponent(); ?>
+
+        <div class="flex flex-wrap lg:flex-nowrap gap-12">
         <?php while($query_blog_posts->have_posts()): ?> <?php $query_blog_posts->the_post() ?>
         <?php $__env->startComponent('components.blog-excerpt-1', [
             'title' => get_the_title(),

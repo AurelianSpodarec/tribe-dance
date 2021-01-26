@@ -1,4 +1,4 @@
-<div class="w-1/2 lg:w-1/3 rounded overflow-hidden mb-8 bg-gray-100 hover:bg-pink-200 cursor-pointer">
+<div class="w-full lg:w-1/3 rounded overflow-hidden mb-8 bg-gray-100 hover:bg-pink-200 cursor-pointer">
 <a href="<?php echo e($permalink); ?>">
 
     <div>

@@ -42,7 +42,11 @@
 
 
     <section class="container mx-auto px-16 mb-24">
+        @sectionTitle(
+        [ 'title' => 'Featured' ]
+        ) @endsectionTitle
     <div class="flex gap-12 ">
+
 
         @vocalSample() @endvocalSample
         @vocalSample() @endvocalSample
@@ -85,7 +89,12 @@
 
 
     <section class="container mx-auto px-16">
-        <div class="flex gap-12">
+
+        @sectionTitle(
+        [ 'title' => 'Blog' ]
+        ) @endsectionTitle
+
+        <div class="flex flex-wrap lg:flex-nowrap gap-12">
         @while ($query_blog_posts->have_posts()) @php $query_blog_posts->the_post() @endphp
         @blogExcerpt1([
             'title' => get_the_title(),
