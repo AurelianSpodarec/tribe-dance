@@ -2,7 +2,12 @@
 
 @section('content')
     @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-single-'.get_post_type())
+
+    <article class="prose">
+
+        @include('partials.content-single-'.get_post_type())
+    </article>
+
 
         f
     @endwhile

@@ -79,12 +79,31 @@ class NavWalker extends \Walker_Nav_Menu {
 
         parent::start_el( $item_html, $item, $depth, $args );
 
-        if ( $item->is_subitem ) {
-            $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
-            $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
+//        if ( $item->is_subitem ) {
+//            $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+//            $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
+//        } else {
+//            $item_html = str_replace( '<a', '<a  class="nav-link tracking-three py-2 px-3 text-sm hover:text-white"', $item_html );
+//        }
+
+        if (is_home()) {
+            if ( $item->is_subitem ) {
+                $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+                $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
+            } else {
+                $item_html = str_replace( '<a', '<a  class="nav-link text-white tracking-three py-2 px-3 text-sm hover:text-black"', $item_html );
+            }
         } else {
-            $item_html = str_replace( '<a', '<a  class="nav-link tracking-three py-2 px-3 text-sm hover:text-white"', $item_html );
+            if ( $item->is_subitem ) {
+                $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+                $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
+            } else {
+                $item_html = str_replace( '<a', '<a  class="nav-link tracking-three py-2 px-3 text-sm hover:text-white"', $item_html );
+            }
         }
+
+
+
 
         $item_html = apply_filters( 'wp_nav_menu_item', $item_html );
 

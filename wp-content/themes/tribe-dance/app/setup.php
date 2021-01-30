@@ -146,6 +146,7 @@ add_action('after_setup_theme', function () {
 
     sage('blade')->compiler()->component('components.block', 'block');
     sage('blade')->compiler()->component('components.block-1', 'block1');
+    sage('blade')->compiler()->component('components.block-2', 'block2');
 
     sage('blade')->compiler()->component('components.blog-excerpt', 'blogExcerpt');
     sage('blade')->compiler()->component('components.blog-excerpt-1', 'blogExcerpt1');

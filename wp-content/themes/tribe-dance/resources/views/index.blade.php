@@ -90,13 +90,24 @@
     </section>
 
 
+
+    <section class="container mx-auto px-16 mb-24">
+        @block2([
+            'title' => 'WE ARE 91VOCALS',
+            'excerpt' => "91Vocals is the world's first vocal centred sample label headed up by singer, songwriter Kate Wild and the team behind CAPSUN ProAudio.",
+            'permalink' => '',
+        ])
+        @endblock2
+    </section>
+
+
     <section class="container mx-auto px-16">
 
         @sectionTitle(
         [ 'title' => 'Blog' ]
         ) @endsectionTitle
 
-        <div class="flex flex-wrap lg:flex-nowrap gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
         @while ($query_blog_posts->have_posts()) @php $query_blog_posts->the_post() @endphp
         @blogExcerpt1([
             'title' => get_the_title(),

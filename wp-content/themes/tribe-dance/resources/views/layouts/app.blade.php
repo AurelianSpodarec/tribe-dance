@@ -6,7 +6,6 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
 
-weewweweweewewwwwwe
     <div role="document">
         <div class="content">
             <main class="main">
