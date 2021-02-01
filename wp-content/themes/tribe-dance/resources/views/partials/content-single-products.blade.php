@@ -14,8 +14,8 @@
                 <header>
                     <h1 class="mb-2 text-3xl font-bold">{!! get_the_title() !!}</h1>
                     <p>{{ App::siteName() }}</p>
-                    <a class="gumroad-button" href="https://gum.co/{{ the_field() }}">Buy my product</a>
-{{--                    <span>£ {{  }}</span>--}}
+                    <a class="gumroad-button" href="https://gum.co/"<?php echo get_field('gumroad_button', get_the_ID()) ?>"">Buy my product</a>
+                    <span>£ {{ get_field('price', get_the_ID()) }}</span>
                 </header>
 
                 <div>

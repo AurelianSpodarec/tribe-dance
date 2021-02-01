@@ -14,8 +14,8 @@
                 <header>
                     <h1 class="mb-2 text-3xl font-bold"><?php echo get_the_title(); ?></h1>
                     <p><?php echo e(App::siteName()); ?></p>
-                    <a class="gumroad-button" href="https://gum.co/westcoasthousevolume1">Buy my product</a>
-
+                    <a class="gumroad-button" href="https://gum.co/"<?php echo get_field('gumroad_button', get_the_ID()) ?>"">Buy my product</a>
+                    <span>£ <?php echo e(get_field('price', get_the_ID())); ?></span>
                 </header>
 
                 <div>

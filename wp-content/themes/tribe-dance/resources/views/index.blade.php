@@ -52,6 +52,7 @@
 
         @while ($query_products_posts->have_posts()) @php $query_products_posts->the_post() @endphp
         @vocalSample([
+            'id' => get_the_ID(),
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
             'thumbnail' => get_the_post_thumbnail_url(),
