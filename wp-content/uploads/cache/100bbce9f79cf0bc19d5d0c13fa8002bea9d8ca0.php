@@ -38,3 +38,4 @@
 
 </div>
 </footer>
+<script src="https://gumroad.com/js/gumroad.js"></script>
