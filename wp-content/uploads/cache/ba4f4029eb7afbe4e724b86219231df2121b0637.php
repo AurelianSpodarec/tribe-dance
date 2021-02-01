@@ -44,10 +44,15 @@
     <div class="flex gap-12 ">
 
 
-        <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
-        <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
-        <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
-        <?php $__env->startComponent('components.vocal-sample'); ?> <?php echo $__env->renderComponent(); ?>
+        <?php while($query_products_posts->have_posts()): ?> <?php $query_products_posts->the_post() ?>
+        <?php $__env->startComponent('components.vocal-sample', [
+            'title' => get_the_title(),
+            'permalink' => get_the_permalink(),
+            'thumbnail' => get_the_post_thumbnail_url(),
+            'price' => get_field('price', get_the_ID())
+        ]); ?>
+        <?php echo $__env->renderComponent(); ?>
+        <?php endwhile; ?>
 
     </div>
     </section>
@@ -55,7 +60,7 @@
 
 
     <section class="mb-24">
-        <iframe width="100%"  height="1000px" src="https://www.youtube.com/embed/W0LO1saOplc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     </section>
 
 
@@ -84,11 +89,22 @@
     </section>
 
 
+
+    <section class="container mx-auto px-16 mb-24">
+        <?php $__env->startComponent('components.block-2', [
+            'title' => 'WE ARE 91VOCALS',
+            'excerpt' => "91Vocals is the world's first vocal centred sample label headed up by singer, songwriter Kate Wild and the team behind CAPSUN ProAudio.",
+            'permalink' => '',
+        ]); ?>
+        <?php echo $__env->renderComponent(); ?>
+    </section>
+
+
     <section class="container mx-auto px-16">
 
         <?php $__env->startComponent('objects.sectionTitle', [ 'title' => 'Blog' ]); ?> <?php echo $__env->renderComponent(); ?>
 
-        <div class="flex flex-wrap lg:flex-nowrap gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
         <?php while($query_blog_posts->have_posts()): ?> <?php $query_blog_posts->the_post() ?>
         <?php $__env->startComponent('components.blog-excerpt-1', [
             'title' => get_the_title(),

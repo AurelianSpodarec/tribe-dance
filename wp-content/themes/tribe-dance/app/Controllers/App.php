@@ -26,6 +26,18 @@ class App extends Controller
         return $query;
     }
 
+    public function queryProductsPosts() {
+        $args = [
+            'rewrite' 	> array('slug' =>'products'),
+            'post_type' => 'products',
+            'posts_per_page' => 3,
+//            'rewrite' => array('slug' => 'products','with_front' => false),
+        ];
+
+        $query = new \Wp_Query($args);
+        return $query;
+    }
+
     public function BlogQueryBlogPosts() {
         $args = [
             // 'post_type' => 'posts',

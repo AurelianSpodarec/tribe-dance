@@ -47,7 +47,7 @@ function register_themepost() {
         'exclude_from_search' => false,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => array('slug' => 'products/%products_categories%','with_front' => FALSE),
+        'rewrite' => array('slug' => 'products','with_front' => FALSE),
         'public' => true,
         'has_archive' => 'products',
         'capability_type' => 'post'

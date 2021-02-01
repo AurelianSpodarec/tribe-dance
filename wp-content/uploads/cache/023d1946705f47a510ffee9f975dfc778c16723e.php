@@ -6,7 +6,6 @@
     <?php do_action('get_header') ?>
     <?php echo $__env->make('partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-weewweweweewewwwwwe
     <div role="document">
         <div class="content">
             <main class="main">
