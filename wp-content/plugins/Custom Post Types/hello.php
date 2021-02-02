@@ -56,3 +56,10 @@ function register_themepost() {
 }
 
 add_action( 'init', 'register_themepost', 20 );
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}

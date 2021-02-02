@@ -12,13 +12,18 @@
 
             <div class="w-full">
                 <header>
-                    <h1 class="mb-2 text-3xl font-bold"><?php echo get_the_title(); ?></h1>
-                    <p><?php echo e(App::siteName()); ?></p>
-                    <a class="gumroad-button" href="https://gum.co/"<?php echo get_field('gumroad_button', get_the_ID()) ?>"">Buy my product</a>
-                    <span>£ <?php echo e(get_field('price', get_the_ID())); ?></span>
+                    <div class="mb-8">
+                        <h1 class="mb-2 uppercase text-2xl md:text-3xl font-bold"><?php echo get_the_title(); ?></h1>
+                        <p class="text-sm uppercase text-gray-400"><?php echo e(App::siteName()); ?></p>
+                    </div>
+
+                    <span class="mb-8 block text-2xl">£ <?php echo e(number_format(get_field('price', get_the_ID()), 2)); ?></span>
+
+                    <a class="w-full text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy my product</a>
+
                 </header>
 
-                <div>
+                <div class="my-10">
                     <h3>Spec</h3>
                 </div>
 
@@ -26,6 +31,8 @@
 
                 <div>
                     <?php the_content() ?>
+                    <a class="w-full mt-6 text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy my product</a>
+
                 </div>
             </div>
 

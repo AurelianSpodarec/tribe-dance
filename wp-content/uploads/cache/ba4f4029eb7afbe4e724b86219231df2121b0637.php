@@ -46,6 +46,7 @@
 
         <?php while($query_products_posts->have_posts()): ?> <?php $query_products_posts->the_post() ?>
         <?php $__env->startComponent('components.vocal-sample', [
+            'id' => get_the_ID(),
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
             'thumbnail' => get_the_post_thumbnail_url(),
