@@ -10,6 +10,24 @@
 * @package Meakid
 */
 
+
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('General Settings'),
+            'menu_title'    => __('General Settings'),
+            'menu_slug'     => 'general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}
+
 ///////////////////////////////////////////////
 //
 // SERVICES CUSTOM POST TYPE
@@ -58,8 +76,3 @@ function register_themepost() {
 add_action( 'init', 'register_themepost', 20 );
 
 
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page();
-	
-}
