@@ -4,7 +4,7 @@
     </div>
     <div>
         <h6 class="uppercase text-sm tracking-two mb-1"><?php echo e($title); ?></h6>
-        <p class="text-xs text-pink-300 tracking-two">£ <?php echo e($price); ?></p>
+        <p class="text-xs text-pink-300 tracking-two">£ <?php echo e(number_format($price, 2)); ?></p>
     </div>
 </a>
 

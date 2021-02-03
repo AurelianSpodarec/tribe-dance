@@ -36,18 +36,18 @@ function my_acf_op_init() {
 
 function register_themepost() {
     $labels = array(
-        'name' => _x( 'products', 'my_custom_post','custom' ),
-        'singular_name' => _x( 'Product', 'my_custom_post', 'custom' ),
-        'add_new' => _x( 'Add New', 'my_custom_post', 'custom' ),
-        'add_new_item' => _x( 'Add New Product Post', 'my_custom_post', 'custom' ),
-        'edit_item' => _x( 'Edit Product Post', 'my_custom_post', 'custom' ),
-        'new_item' => _x( 'New Product Post', 'my_custom_post', 'custom' ),
-        'view_item' => _x( 'View Product Post', 'my_custom_post', 'custom' ),
-        'search_items' => _x( 'Search Product Posts', 'my_custom_post', 'custom' ),
-        'not_found' => _x( 'No ProductPosts found', 'my_custom_post', 'custom' ),
-        'not_found_in_trash' => _x( 'No Product Posts found in Trash', 'my_custom_post', 'custom' ),
-        'parent_item_colon' => _x( 'Parent Product Post:', 'my_custom_post', 'custom' ),
-        'menu_name' => _x( 'Products', 'my_custom_post', 'custom' ),
+        'name' => _x( 'products','sage' ),
+        'singular_name' => _x( 'Product', 'sage' ),
+        'add_new' => _x( 'Add New', 'sage' ),
+        'add_new_item' => _x( 'Add New Product Post', 'sage' ),
+        'edit_item' => _x( 'Edit Product Post', 'sage' ),
+        'new_item' => _x( 'New Product Post', 'sage' ),
+        'view_item' => _x( 'View Product Post', 'sage' ),
+        'search_items' => _x( 'Search Product Posts', 'sage' ),
+        'not_found' => _x( 'No ProductPosts found', 'sage' ),
+        'not_found_in_trash' => _x( 'No Product Posts found in Trash', 'sage' ),
+        'parent_item_colon' => _x( 'Parent Product Post:', 'sage' ),
+        'menu_name' => _x( 'Products', 'sage' ),
     );
 
     $args = array(
@@ -59,7 +59,7 @@ function register_themepost() {
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        'menu_icon' => get_stylesheet_directory_uri() . '/functions/panel/images/catchinternet-small.png',
+        // 'menu_icon' => get_stylesheet_directory_uri() . '/functions/panel/images/catchinternet-small.png',
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
