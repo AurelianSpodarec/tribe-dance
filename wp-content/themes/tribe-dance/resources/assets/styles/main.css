@@ -5,3 +5,30 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.prose {
+    font-size: 18px;
+    max-width: 1070px;
+}
+
+.prose img,
+.prose iframe {
+    width: 100%;
+}
+
+.prose iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wp-block-embed__wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    height: auto;
+}

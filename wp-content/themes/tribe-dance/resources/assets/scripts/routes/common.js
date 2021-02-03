@@ -2,7 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-      alert('££');
+      // alert('££');
 
       var mobileNavMenu = document.querySelector('.js-mobileNavMenu');
 
