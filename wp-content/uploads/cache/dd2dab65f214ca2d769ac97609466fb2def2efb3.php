@@ -14,7 +14,7 @@
                 </h3>
                 <p class="text-lg mb-6"><?php echo e($excerpt); ?></p>
 
-                <button>
+                <button style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
                     Find Out More
                 </button>
 

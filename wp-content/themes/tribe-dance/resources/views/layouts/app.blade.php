@@ -5,6 +5,7 @@
 
     @php do_action('get_header') @endphp
     @include('partials.header')
+    <div class="mt-12">
 
     <div role="document">
         <div class="content">
@@ -19,6 +20,7 @@
         </div>
     </div>
 
+    </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
 

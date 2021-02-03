@@ -1,4 +1,4 @@
-<div class="my-20 prose lg:prose-xl container mx-auto px-16 mb-24">
+<div class="my-20 container mx-auto px-16 mb-24">
     <article <?php post_class() ?>>
 
 
@@ -13,7 +13,7 @@
             <div class="w-full">
                 <header>
                     <div class="mb-8">
-                        <h1 class="mb-2 uppercase text-2xl md:text-3xl font-bold"><?php echo get_the_title(); ?></h1>
+                        <h1 class="mb-2 uppercase text-2xl lg:text-5xl font-semibold"><?php echo get_the_title(); ?></h1>
                         <p class="text-sm uppercase text-gray-400"><?php echo e(App::siteName()); ?></p>
                     </div>
 
@@ -28,8 +28,7 @@
                 </div>
 
 
-
-                <div>
+                <div class="prose lg:prose-xl">
                     <?php the_content() ?>
                     <a class="w-full mt-6 text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy my product</a>
 

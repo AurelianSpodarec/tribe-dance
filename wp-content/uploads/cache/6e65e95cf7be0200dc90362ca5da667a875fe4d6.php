@@ -1,4 +1,4 @@
-<header class="bg-pink-300 z-20 relative>
+<header class="js-mainHeader  bg-pink-300 z-20 relative">
     <div class="container mx-auto px-4 lg:px-16">
         <div class="flex justify-between items-center py-5 px-5 lg:px-16">
 

@@ -13,7 +13,8 @@
                 <a href="">{{ $title  }}</a>
             </h3>
             <p class="mb-6">{{ $excerpt }}</p>
-            <button>
+
+            <button style="letter-spacing: 1px;" class="bg-pink-200 font-bold py-4 px-16 text-xs text-black uppercase hover:bg-white border hover:border-gray-900">
                 Find Out More
             </button>
 

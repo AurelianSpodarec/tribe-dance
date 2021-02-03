@@ -10,8 +10,8 @@
                 </h3>
                 <p class="text-lg mb-6">{{ $excerpt }}</p>
 
-                <button>
-                    Find Out More
+                <button style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
+                    Learn More
                 </button>
 
             </div>

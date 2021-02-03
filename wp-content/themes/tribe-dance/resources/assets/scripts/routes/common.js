@@ -4,6 +4,44 @@ export default {
 
       // alert('££');
 
+
+      var mainHeader = document.querySelector('.js-mainHeader'),
+          siteHeaderHeight = mainHeader.offsetHeight,
+          prevScroll = 0;
+
+      function stickyNav() {
+          if (mainHeader.classList.contains('is-active')) return;
+
+          if (window.scrollY >= siteHeaderHeight) {
+              mainHeader.classList.add('is-sticky');
+          } else {
+              mainHeader.classList.remove('is-sticky');
+          }
+      }
+
+      function showNav() {
+
+          if (mainHeader.classList.contains('is-active')) return;
+
+          var currentScroll = window.pageYOffset;
+
+          if (currentScroll < prevScroll) {
+              mainHeader.classList.add('sticky-show');
+          } else {
+              mainHeader.classList.remove('sticky-show');
+          }
+
+          prevScroll = currentScroll;
+      }
+
+      window.addEventListener('scroll', showNav);
+      window.addEventListener('scroll', stickyNav);
+
+
+
+
+
+
       var mobileNavMenu = document.querySelector('.js-mobileNavMenu');
 
       var buttonNavMenuOpen = document.querySelector('.js-buttonNavMenuOpen');

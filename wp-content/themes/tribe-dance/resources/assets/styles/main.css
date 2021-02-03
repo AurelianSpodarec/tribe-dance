@@ -11,6 +11,16 @@ body {
     max-width: 1070px;
 }
 
+.prose a {
+    color: #fcbdc9;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.prose p,
+.prose strong {
+    margin-bottom: 26px;
+}
+
 .prose img,
 .prose iframe {
     width: 100%;
@@ -31,4 +41,21 @@ body {
     padding-bottom: 56.25%;
     height: 0;
     height: auto;
+}
+
+.header-fixed {
+    width: 100%;
+    position: fixed;
+}
+
+.is-sticky {
+    transform: translateY(-120%);
+    top: 0;
+    background: #172143;
+    -webkit-box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+    box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+}
+
+.sticky-show {
+    transform: translateY(0);
 }

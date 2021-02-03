@@ -2,8 +2,7 @@
 <article <?php post_class() ?>>
 
     <header>
-        <h1 class="entry-title"><?php echo get_the_title(); ?></h1>
-        <?php echo $__env->make('partials/entry-meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <h1 class="mb-2 uppercase text-2xl lg:text-5xl font-semibold mb-12"><?php echo get_the_title(); ?></h1>
     </header>
     <div class="prose lg:prose-xl entry-content">
         <?php the_content() ?>
