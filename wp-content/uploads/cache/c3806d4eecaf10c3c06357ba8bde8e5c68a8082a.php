@@ -1,6 +1,7 @@
 <?php $__env->startSection('content'); ?>
 
     <section class="container mx-auto px-16">
+        <?php $__env->startComponent('objects.pageTitle', [ 'title' => 'Blog' ]); ?> <?php echo $__env->renderComponent(); ?>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
 
             <?php while($blog_query_blog_posts->have_posts()): ?> <?php $blog_query_blog_posts->the_post() ?>

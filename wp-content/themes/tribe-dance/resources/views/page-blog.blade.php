@@ -3,6 +3,9 @@
 @section('content')
 
     <section class="container mx-auto px-16">
+        @pageTitle(
+        [ 'title' => 'Blog' ]
+        ) @endpageTitle
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
 
             @while ($blog_query_blog_posts->have_posts()) @php $blog_query_blog_posts->the_post() @endphp

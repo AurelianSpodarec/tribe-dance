@@ -2,7 +2,7 @@
 
 
     <section class="container mx-auto px-16 mb-24">
-        <?php $__env->startComponent('objects.sectionTitle', [ 'title' => 'Products' ]); ?> <?php echo $__env->renderComponent(); ?>
+        <?php $__env->startComponent('objects.pageTitle', [ 'title' => 'Products' ]); ?> <?php echo $__env->renderComponent(); ?>
         <div class="flex gap-12 ">
 
 

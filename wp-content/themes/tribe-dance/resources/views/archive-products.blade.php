@@ -4,9 +4,9 @@
 
 
     <section class="container mx-auto px-16 mb-24">
-        @sectionTitle(
+        @pageTitle(
         [ 'title' => 'Products' ]
-        ) @endsectionTitle
+        ) @endpageTitle
         <div class="flex gap-12 ">
 
 
