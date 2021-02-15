@@ -8,7 +8,12 @@ body {
 
 .prose {
     font-size: 18px;
+    line-height: 37px;
     max-width: 1070px;
+}
+
+.prose p {
+    line-height: 37px;
 }
 
 .prose a {
@@ -18,6 +23,7 @@ body {
 
 .prose p,
 .prose strong {
+    line-height: 37px;
     margin-bottom: 26px;
 }
 

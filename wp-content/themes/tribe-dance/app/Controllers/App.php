@@ -28,8 +28,8 @@ class App extends Controller
 
     public function queryProductsPosts() {
         $args = [
-            'rewrite' 	> array('slug' =>'products'),
-            'post_type' => 'products',
+            'rewrite' 	> array('slug' =>'shop'),
+            'post_type' => 'shop',
             'posts_per_page' => 3,
 //            'rewrite' => array('slug' => 'products','with_front' => false),
         ];

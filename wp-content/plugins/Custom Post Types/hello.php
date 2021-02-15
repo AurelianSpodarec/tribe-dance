@@ -36,8 +36,8 @@ function my_acf_op_init() {
 
 function register_themepost() {
     $labels = array(
-        'name' => _x( 'products','sage' ),
-        'singular_name' => _x( 'Product', 'sage' ),
+        'name' => _x( 'shop','sage' ),
+        'singular_name' => _x( 'Shop', 'sage' ),
         'add_new' => _x( 'Add New', 'sage' ),
         'add_new_item' => _x( 'Add New Product Post', 'sage' ),
         'edit_item' => _x( 'Edit Product Post', 'sage' ),
@@ -47,7 +47,7 @@ function register_themepost() {
         'not_found' => _x( 'No ProductPosts found', 'sage' ),
         'not_found_in_trash' => _x( 'No Product Posts found in Trash', 'sage' ),
         'parent_item_colon' => _x( 'Parent Product Post:', 'sage' ),
-        'menu_name' => _x( 'Products', 'sage' ),
+        'menu_name' => _x( 'Shop', 'sage' ),
     );
 
     $args = array(
@@ -55,7 +55,7 @@ function register_themepost() {
         'hierarchical' => false,
         'description' => 'Custom Product Posts',
         'supports' => array( 'title', 'editor', 'thumbnail' ),
-        'taxonomies' => array( 'post_tag','products_categories'),
+        'taxonomies' => array( 'post_tag','shop_categories'),
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
@@ -65,12 +65,12 @@ function register_themepost() {
         'exclude_from_search' => false,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => array('slug' => 'products','with_front' => FALSE),
+        'rewrite' => array('slug' => 'shop','with_front' => FALSE),
         'public' => true,
-        'has_archive' => 'products',
+        'has_archive' => 'shop',
         'capability_type' => 'post'
     );
-    register_post_type( 'products', $args );
+    register_post_type( 'shop', $args );
 }
 
 add_action( 'init', 'register_themepost', 20 );

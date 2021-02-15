@@ -16,6 +16,7 @@ const config = merge({
   copy: 'images/**/*',
   proxyUrl: 'http://localhost:3000',
   cacheBusting: '[name]_[hash]',
+
   paths: {
     root: rootPath,
     assets: path.join(rootPath, 'resources/assets'),
@@ -23,7 +24,7 @@ const config = merge({
   },
   enabled: {
     sourceMaps: !isProduction,
-    optimize: isProduction,
+    optimize: false,
     cacheBusting: isProduction,
     watcher: !!argv.watch,
   },

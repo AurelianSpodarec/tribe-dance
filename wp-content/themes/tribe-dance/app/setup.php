@@ -145,6 +145,7 @@ add_action('after_setup_theme', function () {
     // Components
     //
 
+    sage('blade')->compiler()->component('components.banner-call', 'bannerCall');
     sage('blade')->compiler()->component('components.block', 'block');
     sage('blade')->compiler()->component('components.block-1', 'block1');
     sage('blade')->compiler()->component('components.block-2', 'block2');

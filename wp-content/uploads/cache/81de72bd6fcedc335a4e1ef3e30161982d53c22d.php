@@ -1,4 +1,4 @@
-<div class="flex flex-wrap bg-gray-100 hover:bg-pink-100 cursor-pointer <?php echo e($reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : ""); ?>">
+<div class="flex flex-wrap bg-gray-100 <?php echo e(!$isLink ? "hover:bg-pink-100 cursor-pointer" : ""); ?>  <?php echo e($reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : ""); ?>">
 
     <div class="w-full">
         <div class="table h-full">
@@ -10,9 +10,11 @@
                 </h3>
                 <p class="text-lg mb-6"><?php echo e($excerpt); ?></p>
 
-                <button style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
-                    Learn More
-                </button>
+                <?php if(!$isLink) : ?>
+                    <button style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
+                        Learn More
+                    </button>
+                <?php endif; ?>
 
             </div>
 

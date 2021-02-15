@@ -1,16 +1,16 @@
-<section class="text-center w-full container my-24 mx-auto ">
+{{--<section class="text-center w-full container my-24 mx-auto ">--}}
 
-    <div class="mx-auto w-64">
-        <img width="164px" class="mx-auto " src="https://cdn.shopify.com/s/files/1/2301/3747/t/3/assets/logo.png?v=15904693863245551424" />
-    </div>
-</section>
+{{--    <div class="mx-auto w-64">--}}
+{{--        <img width="164px" class="mx-auto " src="https://cdn.shopify.com/s/files/1/2301/3747/t/3/assets/logo.png?v=15904693863245551424" />--}}
+{{--    </div>--}}
+{{--</section>--}}
 
 <footer class="bg-gray-100">
 <div class="container mx-auto px-16 py-8">
 
         <div class="justify-between mx-auto flex flex-wrap sm:p-4 flex-row items-center relative">
 
-{{--            <div class="flex-1">--}}
+            <div class="flex-1">
 {{--                <div class=" mr-auto">--}}
 {{--                    @if (has_nav_menu('secondary_navigation'))--}}
 {{--                        {!! wp_nav_menu([--}}
@@ -21,11 +21,23 @@
 {{--                        !!}--}}
 {{--                    @endif--}}
 {{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="flex-1 justify-center text-center md:ml-auto md:mr-auto ">--}}
-            <div class="flex-1 justify-center  md:mr-auto ">
                 <p class="text-xs uppercase">&copy; {{ App::currentYear() }} {{  App::siteName() }}</p>
+            </div>
+
+            <div class="flex-1 justify-center text-center md:ml-auto md:mr-auto ">
+{{--            <div class="flex-1 justify-center  ">--}}
+{{--                <p class="text-xs uppercase">&copy; {{ App::currentYear() }} {{  App::siteName() }}</p>--}}
+
+                <?php if ( have_rows( 'site_logos', 'options' ) ) : ?>
+                <?php while ( have_rows( 'site_logos', 'options' ) ) : the_row(); ?>
+
+                <?php if ( $logo = get_sub_field( 'logo', 'options' ) ) : ?>
+                <img width="200px" class="mx-auto" src="<?php echo esc_html( $logo); ?>" />
+                <?php endif; ?>
+
+                <?php endwhile; ?>
+                <?php endif; ?>
+
             </div>
 
             <div class="flex flex-1">

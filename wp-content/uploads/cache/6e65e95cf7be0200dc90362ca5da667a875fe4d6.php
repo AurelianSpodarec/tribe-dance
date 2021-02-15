@@ -1,4 +1,4 @@
-<header class="js-mainHeader  bg-pink-300 z-20 relative">
+<header class="js-mainHeader  z-20 relative" style="background-color:  #191919; border-bottom: 1px solid orange;">
     <div class="container mx-auto px-4 lg:px-16">
         <div class="flex justify-between items-center py-5 px-5 lg:px-16">
 
@@ -6,7 +6,17 @@
             </div>
 
             <a class="brand mr-10" href="<?php echo e(home_url('/')); ?>">
-                <img width="100px" src="https://cdn.shopify.com/s/files/1/2301/3747/t/3/assets/logo.png?v=15904693863245551424"/>
+
+                <?php if ( have_rows( 'site_logos', 'options' ) ) : ?>
+                <?php while ( have_rows( 'site_logos', 'options' ) ) : the_row(); ?>
+
+                    <?php if ( $logo = get_sub_field( 'logo', 'options' ) ) : ?>
+                    <img width="100px" src="<?php echo esc_html( $logo); ?>" />
+                    <?php endif; ?>
+
+                <?php endwhile; ?>
+                <?php endif; ?>
+
             </a>
 
             <div class="lg:hidden js-buttonNavMenuOpen">
@@ -25,7 +35,7 @@
                 <?php endif; ?>
             </nav>
 
-            <div class="hidden lg:flex ml-auto flex gap-3">
+            <div class="hidden lg:flex ml-auto text-white flex gap-3">
                 <?php if ( have_rows( 'social_icons', 'options' ) ) : ?>
                 <?php while ( have_rows( 'social_icons', 'options' ) ) : the_row(); ?>
 

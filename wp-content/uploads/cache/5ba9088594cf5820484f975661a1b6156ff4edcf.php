@@ -19,7 +19,7 @@
 
                     <span class="mb-8 block text-2xl">£ <?php echo e(number_format(get_field('price', get_the_ID()), 2)); ?></span>
 
-                    <a class="w-full text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy my product</a>
+                    <a class="w-full text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy Now</a>
 
                 </header>
 
@@ -49,7 +49,7 @@
 
                 <div class="prose lg:prose-xl">
                     <?php the_content() ?>
-                    <a class="w-full mt-6 text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy my product</a>
+                    <a class="w-full mt-6 text-center gumroad-button" href="https://gum.co/<?php echo get_field('gumroad_button', get_the_ID()); ?>">Buy Now</a>
 
                 </div>
             </div>
