@@ -38,6 +38,19 @@ class App extends Controller
         return $query;
     }
 
+    public function queryRandomProductsPosts() {
+        $args = [
+            'rewrite' 	> array('slug' =>'shop'),
+            'post_type' => 'shop',
+            'posts_per_page' => 4,
+            'orderby'        => 'rand',
+//            'rewrite' => array('slug' => 'products','with_front' => false),
+        ];
+
+        $query = new \Wp_Query($args);
+        return $query;
+    }
+
     public function BlogQueryBlogPosts() {
         $args = [
             // 'post_type' => 'posts',

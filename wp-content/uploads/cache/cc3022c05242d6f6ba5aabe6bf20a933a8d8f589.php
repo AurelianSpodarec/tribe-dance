@@ -61,6 +61,27 @@
 
             </div>
 
+
+
+            <div class="mt-32">
+                <?php $__env->startComponent('objects.sectionTitle', [ 'title' => 'You might also like' ]); ?> <?php echo $__env->renderComponent(); ?>
+
+                <div class="flex gap-12 ">
+                <?php while($query_random_products_posts->have_posts()): ?> <?php $query_random_products_posts->the_post() ?>
+                <?php $__env->startComponent('components.vocal-sample', [
+                'id' => get_the_ID(),
+                'title' => get_the_title(),
+                'permalink' => get_the_permalink(),
+                'thumbnail' => get_the_post_thumbnail_url(),
+                'price' => get_field('price', get_the_ID())
+                ]); ?>
+                <?php echo $__env->renderComponent(); ?>
+                <?php endwhile; ?>
+                </div>
+            </div>
+
+
+
             <footer>
                 <?php echo wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
 

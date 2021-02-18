@@ -11,17 +11,17 @@
         <div class="justify-between mx-auto flex flex-wrap sm:p-4 flex-row items-center relative">
 
             <div class="flex-1">
+                <div class=" mr-auto">
+                    <?php if(has_nav_menu('secondary_navigation')): ?>
+                        <?php echo wp_nav_menu([
+                            'theme_location' => 'secondary_navigation',
+                            'menu_class' => 'flex',
+                            'walker' => new \App\FooterWalker()
+                            ]); ?>
 
+                    <?php endif; ?>
+                </div>
 
-
-
-
-
-
-
-
-
-                <p class="text-xs uppercase">&copy; <?php echo e(App::currentYear()); ?> <?php echo e(App::siteName()); ?></p>
             </div>
 
             <div class="flex-1 justify-center text-center md:ml-auto md:mr-auto ">

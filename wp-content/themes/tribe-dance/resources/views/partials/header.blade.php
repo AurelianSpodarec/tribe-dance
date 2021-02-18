@@ -11,7 +11,7 @@
                 <?php while ( have_rows( 'site_logos', 'options' ) ) : the_row(); ?>
 
                     <?php if ( $logo = get_sub_field( 'logo', 'options' ) ) : ?>
-                    <img width="100px" src="<?php echo esc_html( $logo); ?>" />
+                    <img width="150px" src="<?php echo esc_html( $logo); ?>" />
                     <?php endif; ?>
 
                 <?php endwhile; ?>
