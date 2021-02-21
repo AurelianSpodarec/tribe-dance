@@ -1,4 +1,4 @@
-<div class="flex flex-wrap bg-gray-100 {{ !$isLink ? "hover:bg-pink-100 cursor-pointer" : ""}}  {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
+<div class="flex flex-wrap bg-gray-100 {{ !$isLink ? "hover:bg-quad cursor-pointer" : ""}}  {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
 
     <div class="w-full">
         <div class="table h-full">

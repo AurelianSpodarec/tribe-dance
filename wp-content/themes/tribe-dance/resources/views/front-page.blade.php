@@ -40,23 +40,40 @@
 
 
         <?php endwhile; ?>
+        <?php endif; ?>
+    </section>
+
+
+    <section class="container mx-auto px-16 mb-24">
+    <?php if ( have_rows( 'latest_release' ) ) : ?>
+    <?php while ( have_rows( 'latest_release' ) ) : the_row(); ?>
+
+
+
+
+        @sectionTitle(
+        [ 'title' => 'LATEST RELEASE' ]
+        ) @endsectionTitle
+
+
+        @block([
+            'image' => get_sub_field( 'image' ),
+            'title' => esc_html(get_sub_field( 'title' )),
+            'excerpt' => get_sub_field( 'text' ),
+            'link' => esc_url( $link_url ),
+        ])
+        @endblock
+
+
+
+
+    <?php endwhile; ?>
     <?php endif; ?>
 
     </section>
 
 
 
-    <section class="container mx-auto px-16 mb-24">
-        @sectionTitle(
-        [ 'title' => 'LATEST RELEASE' ]
-        ) @endsectionTitle
-
-        @block([
-        'title' => 'SAD GIRL: ALT POP',
-        'excerpt' => "Veiled in melancholy, Sad Girl: Alt Pop explores the dark gritty electro landscape popularised by artists such as Billie Eilish, Lorde and Halsey. Delivering a modern take on contemporary pop, with a rich pallet of moody lyrics, vocal & melodic loops, grungy synths, bouncing 808s and resampled drum and percussion."
-        ])
-        @endblock
-    </section>
 
 
 
@@ -66,61 +83,96 @@
         ) @endsectionTitle
         <div class="flex gap-12 ">
 
-
-            @while ($query_products_posts->have_posts()) @php $query_products_posts->the_post() @endphp
+            <?php if ( $query_products_posts->have_posts() ) : while ( $query_products_posts->have_posts() ) : $query_products_posts->the_post(); ?>
             @vocalSample([
-            'id' => get_the_ID(),
-            'title' => get_the_title(),
-            'permalink' => get_the_permalink(),
-            'thumbnail' => get_the_post_thumbnail_url(),
-            'price' => get_field('price', get_the_ID())
+                'id' => get_the_ID(),
+                'title' => get_the_title(),
+                'permalink' => get_the_permalink(),
+                'thumbnail' => get_the_post_thumbnail_url(),
+                'price' => get_field('price', get_the_ID())
             ])
             @endvocalSample
-            @endwhile
+            <?php endwhile;
+                wp_reset_postdata();
+            else : ?>
+                <p><?php esc_html_e( 'Sorry, no products found.' ); ?></p>
+            <?php endif; ?>
 
         </div>
     </section>
 
 
+    <section class="container mx-auto px-16 mb-24">
+        <?php if ( have_rows( 'block1' ) ) : ?>
+        <?php while ( have_rows( 'block1' ) ) : the_row(); ?>
 
-    <section class="mb-24">
-        {{--        <iframe width="100%"  height="1000px" src="https://www.youtube.com/embed/W0LO1saOplc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+
+            @sectionTitle(
+            [ 'title' => 'LATEST RELEASE' ]
+            ) @endsectionTitle
+
+            @block1([
+                'image' => get_sub_field( 'image' ),
+                'title' => esc_html(get_sub_field( 'title' )),
+                'excerpt' => get_sub_field( 'text' ),
+                'link' => esc_url( $link_url ),
+                'reverse' => true,
+            ])
+            @endblock1
+
+
+        <?php endwhile; ?>
+        <?php endif; ?>
+    </section>
+
+
+
+
+
+
+
+    <section class="container mx-auto px-16 mb-24">
+
+        @sectionTitle(
+        [ 'title' => 'LATEST RELEASE' ]
+        ) @endsectionTitle
+
+        <?php if ( have_rows( 'block2' ) ) : ?>
+        <?php while ( have_rows( 'block2' ) ) : the_row(); ?>
+
+            @block1([
+            'image' => get_sub_field( 'image' ),
+            'title' => esc_html(get_sub_field( 'title' )),
+            'excerpt' => get_sub_field( 'text' ),
+            'link' => esc_url( $link_url ),
+            ])
+            @endblock1
+
+
+        <?php endwhile; ?>
+        <?php endif; ?>
     </section>
 
 
 
     <section class="container mx-auto px-16 mb-24">
-        @block1([
-        'title' => 'WE ARE 91VOCALS',
-        'excerpt' => "91Vocals is the world's first vocal centred sample label headed up by singer, songwriter Kate Wild and the team behind CAPSUN ProAudio.",
-        'permalink' => '',
-        'thumbnail' => 'https://cdn.shopify.com/s/files/1/2301/3747/files/91V_Title1_Background_940x640_crop_center.jpg?v=1507560312',
-        'reverse' => true,
-        ])
-        @endblock1
-    </section>
+        @sectionTitle(
+        [ 'title' => 'LATEST RELEASE' ]
+        ) @endsectionTitle
+
+        <?php if ( have_rows( 'block3' ) ) : ?>
+        <?php while ( have_rows( 'block3' ) ) : the_row(); ?>
 
 
+            @block2([
+            'title' => esc_html(get_sub_field( 'title' )),
+            'excerpt' => get_sub_field( 'text' ),
+            'link' => esc_url( $link_url )
+            ])
+            @endblock1
 
-    <section class="container mx-auto px-16 mb-24">
-        @block1([
-        'title' => 'Premium vocal samples',
-        'excerpt' => 'We work with incredible singers, top songwriters and high end gear to deliver a pro sound with a contemporary feel. Inspiring vocal content to make your music stand out. ',
-        'permalink' => '',
-        'thumbnail' => 'https://cdn.shopify.com/s/files/1/2301/3747/files/91V_Title2_Background_940x640_crop_center.jpg?v=1507560310'
-        ])
-        @endblock1
-    </section>
-
-
-
-    <section class="container mx-auto px-16 mb-24">
-        @block2([
-        'title' => 'WE ARE 91VOCALS',
-        'excerpt' => "91Vocals is the world's first vocal centred sample label headed up by singer, songwriter Kate Wild and the team behind CAPSUN ProAudio.",
-        'permalink' => '',
-        ])
-        @endblock2
+        <?php endwhile; ?>
+        <?php endif; ?>
     </section>
 
 

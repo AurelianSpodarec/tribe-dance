@@ -1,7 +1,7 @@
-<div class="flex flex-wrap bg-gray-100 hover:bg-pink-100 cursor-pointer {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
+<div class="flex flex-wrap bg-gray-100 hover:bg-quad cursor-pointer {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
 
     <div class="w-full lg:w-2/3">
-        <img  style="max-height: 640px;" class="w-full object-cover {{ $reverse ? "xl:pl-36 2xl:pl-44" : "xl:pr-36 2xl:pr-44" }}" src="{{ $thumbnail }}" />
+        <img  style="max-height: 640px;" class="w-full object-cover {{ $reverse ? "xl:pl-36 2xl:pl-44" : "xl:pr-36 2xl:pr-44" }}" src="{{ $image }}" />
     </div>
 
     <div class="lg:w-1/3">
@@ -14,9 +14,9 @@
                 </h3>
                 <p class="text-lg mb-6">{{ $excerpt }}</p>
 
-                <button style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
+                <a href="{{ $link }}" style="letter-spacing: 2.25px;" class="uppercase text-xs font-semibold underline">
                     Find Out More
-                </button>
+                </a>
 
             </div>
 

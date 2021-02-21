@@ -1,7 +1,7 @@
 <div class="flex flex-wrap bg-gray-100">
 
     <div class="w-full lg:w-1/2">
-        <img class="w-full object-cover lg:pr-8" src="https://cdn.shopify.com/s/files/1/2301/3747/products/91V_SG_Cover_Art_1024x1024.png?v=1596990056" />
+        <img class="w-full object-cover lg:pr-8" src="{{ $image }}" />
     </div>
 
     <div class="w-full lg:w-1/2">
@@ -14,9 +14,9 @@
             </h3>
             <p class="mb-6">{{ $excerpt }}</p>
 
-            <button style="letter-spacing: 1px;" class="bg-pink-200 font-bold py-4 px-16 text-xs text-black uppercase hover:bg-white border hover:border-gray-900">
+            <a href="{{ $link }}" target="{{ $linkTarget }}" style="letter-spacing: 1px;" class=" font-bold py-4 px-16 text-xs bg-secondary text-black uppercase hover:bg-white border hover:border-gray-900">
                 Find Out More
-            </button>
+            </a>
 
         </div>
 

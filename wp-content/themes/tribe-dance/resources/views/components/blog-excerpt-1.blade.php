@@ -1,4 +1,4 @@
-<div class="w-full rounded overflow-hidden mb-8 bg-gray-100 hover:bg-pink-200 cursor-pointer">
+<div class="w-full rounded overflow-hidden mb-8 bg-gray-100 hover:bg-quad cursor-pointer">
 <a href="{{ $permalink }}">
 
     <div>

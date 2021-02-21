@@ -9,14 +9,35 @@
         ) @endpageTitle
 
         <section class="container mx-auto mb-24">
-            @block2([
-            'title' => 'WE ARE 91VOCALS',
-            'excerpt' => "91Vocals is the world's first vocal centred sample label headed up by singer, songwriter Kate Wild and the team behind CAPSUN ProAudio.",
-            'permalink' => '',
-            'isLink' => 'false',
-            ])
-            @endblock2
-{{--            link: flase--}}
+            <?php if ( have_rows( 'shop_block' ) ) : ?>
+            <?php while ( have_rows( 'shop_block' ) ) :
+                        the_row(); ?>
+
+                <?php if ( $title = get_sub_field( 'title' ) ) : ?>
+                    <?php echo esc_html( $title ); ?>
+                <?php endif; ?>
+
+                <?php if ( $text = get_sub_field( 'text' ) ) : ?>
+                    <?php echo $text; ?>
+                <?php endif; ?>
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php if ( have_rows( 'shop_block' ) ) : ?>
+            <?php while ( have_rows( 'shop_block' ) ) : the_row(); ?>
+s
+                @block2([
+                    'title' => get_sub_field( 'title' ),
+                    'excerpt' => get_sub_field( 'text' ),
+                    'permalink' => '',
+                    'isLink' => 'false',
+                ])
+                @endblock2
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+
         </section>
 
 

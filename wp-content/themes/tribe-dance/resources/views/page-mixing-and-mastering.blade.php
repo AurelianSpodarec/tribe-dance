@@ -6,10 +6,25 @@
     @endwhile
 
 
-    @bannerCall([
-    'title' => 'Ready to get started?',
-    'excerpt' => 'Get in touch with Mike for a no-obligation chat and we’ll show you how you can go from idea to launch in 100 days so you can grow your business and drive breakout success',
-    ])
-    @endbannerCall
+
+    <?php if ( have_rows( 'mmcall' ) ) : ?>
+	<?php while ( have_rows( 'mmcall' ) ) : the_row(); ?>
+
+        @bannerCall([
+            'title' => get_sub_field( 'title' ),
+            'excerpt' => get_sub_field( 'text' ),
+            'linkLabel' => get_sub_field( 'link_label' ),
+            'link' => get_sub_field( 'link' ),
+            'avatar' =>  get_sub_field( 'avatar' ),
+            'avatarName' => get_sub_field( 'avatar_name' ),
+            'avatarContact' =>  get_sub_field( 'avatar_contact' )
+        ])
+        @endbannerCall
+
+
+	<?php endwhile; ?>
+    <?php endif; ?>
+
+
 
 @endsection

@@ -31,10 +31,10 @@ class App extends Controller
             'rewrite' 	> array('slug' =>'shop'),
             'post_type' => 'shop',
             'posts_per_page' => 3,
-//            'rewrite' => array('slug' => 'products','with_front' => false),
         ];
 
         $query = new \Wp_Query($args);
+
         return $query;
     }
 
@@ -44,7 +44,6 @@ class App extends Controller
             'post_type' => 'shop',
             'posts_per_page' => 4,
             'orderby'        => 'rand',
-//            'rewrite' => array('slug' => 'products','with_front' => false),
         ];
 
         $query = new \Wp_Query($args);

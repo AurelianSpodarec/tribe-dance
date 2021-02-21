@@ -5,32 +5,27 @@ export default {
       // alert('££');
 
 
-      var mainHeader = document.querySelector('.js-mainHeader'),
-          siteHeaderHeight = mainHeader.offsetHeight,
+      var siteHeader = document.querySelector('.js-mainHeader'),
+          siteHeaderHeight = siteHeader.offsetHeight,
           prevScroll = 0;
+console.log('SDds', window.scrollY)
 
       function stickyNav() {
-          if (mainHeader.classList.contains('is-active')) return;
-
           if (window.scrollY >= siteHeaderHeight) {
-              mainHeader.classList.add('is-sticky');
-          } else {
-              mainHeader.classList.remove('is-sticky');
+              siteHeader.classList.add('is-sticky');
+          } else{
+              siteHeader.classList.remove('is-sticky');
           }
       }
 
       function showNav() {
-
-          if (mainHeader.classList.contains('is-active')) return;
-
           var currentScroll = window.pageYOffset;
 
-          if (currentScroll < prevScroll) {
-              mainHeader.classList.add('sticky-show');
+          if(currentScroll < prevScroll) {
+              siteHeader.classList.add('sticky-show');
           } else {
-              mainHeader.classList.remove('sticky-show');
+              siteHeader.classList.remove('sticky-show');
           }
-
           prevScroll = currentScroll;
       }
 

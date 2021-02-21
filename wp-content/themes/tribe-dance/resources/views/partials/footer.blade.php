@@ -31,8 +31,8 @@
                 <?php if ( have_rows( 'site_logos', 'options' ) ) : ?>
                 <?php while ( have_rows( 'site_logos', 'options' ) ) : the_row(); ?>
 
-                <?php if ( $logo = get_sub_field( 'logo', 'options' ) ) : ?>
-                <img width="200px" class="mx-auto" src="<?php echo esc_html( $logo); ?>" />
+                <?php if ( $logo = get_sub_field( 'logo_footer', 'options' ) ) : ?>
+                    <img width="200px" class="mx-auto" src="<?php echo esc_html( $logo); ?>" />
                 <?php endif; ?>
 
                 <?php endwhile; ?>

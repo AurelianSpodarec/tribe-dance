@@ -4,7 +4,7 @@
     </div>
     <div>
         <h6 class="uppercase text-sm tracking-two mb-1">{{ $title  }}</h6>
-        <p class="text-xs text-pink-300 tracking-two">£ {{ number_format($price, 2) }}</p>
+        <p class="text-xs text-accent tracking-two">£ {{ number_format($price, 2) }}</p>
     </div>
 </a>
 

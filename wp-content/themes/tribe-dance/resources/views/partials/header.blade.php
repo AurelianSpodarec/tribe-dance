@@ -1,11 +1,16 @@
-<header class="js-mainHeader  z-20 relative" style="background-color:  #191919; border-bottom: 1px solid orange;">
-    <div class="container mx-auto px-4 lg:px-16">
-        <div class="flex justify-between items-center py-5 px-5 lg:px-16">
 
-            <div class="lg:hidden">
-            </div>
+<?php if ( is_front_page() || is_home() ) { ?>
+       <header class="js-mainHeader transition duration-500 ease-in-out z-40 fixed w-full">
+           <?php } else { ?>
+        <header class="z-20 relative" style="background-color:  #191919; border-bottom: 1px solid orange;">
+<?php } ?>
+    <div class="container mx-auto xl:px-4 lg:px-16">
+        <div class="flex justify-between items-center py-5 px-5 xl:px-16">
 
-            <a class="brand mr-10" href="{{ home_url('/') }}">
+{{--            <div class="lg:hidden">--}}
+{{--            </div>--}}
+
+            <a class="brand lg:mr-10" href="{{ home_url('/') }}">
 
                 <?php if ( have_rows( 'site_logos', 'options' ) ) : ?>
                 <?php while ( have_rows( 'site_logos', 'options' ) ) : the_row(); ?>
@@ -20,7 +25,7 @@
             </a>
 
             <div class="lg:hidden js-buttonNavMenuOpen">
-               open Button
+                <svg class="text-white w-5" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg>
             </div>
 
 
