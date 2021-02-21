@@ -4,41 +4,20 @@
 
 
     <section class="container mx-auto px-16 mb-24">
+
         @pageTitle(
         [ 'title' => 'Shop' ]
         ) @endpageTitle
 
-        <section class="container mx-auto mb-24">
-            <?php if ( have_rows( 'shop_block' ) ) : ?>
-            <?php while ( have_rows( 'shop_block' ) ) :
-                        the_row(); ?>
-
-                <?php if ( $title = get_sub_field( 'title' ) ) : ?>
-                    <?php echo esc_html( $title ); ?>
-                <?php endif; ?>
-
-                <?php if ( $text = get_sub_field( 'text' ) ) : ?>
-                    <?php echo $text; ?>
-                <?php endif; ?>
-
-            <?php endwhile; ?>
-            <?php endif; ?>
-
-            <?php if ( have_rows( 'shop_block' ) ) : ?>
-            <?php while ( have_rows( 'shop_block' ) ) : the_row(); ?>
-s
-                @block2([
-                    'title' => get_sub_field( 'title' ),
-                    'excerpt' => get_sub_field( 'text' ),
-                    'permalink' => '',
-                    'isLink' => 'false',
-                ])
-                @endblock2
-
-            <?php endwhile; ?>
-            <?php endif; ?>
-
-        </section>
+        <div class="container mx-auto mb-24">
+            @block2([
+            'excerpt' => "Get some home made house lovin' for your next banger. Our sample libraries, racks and templates are chock-full of unique ideas to get you over that creative hump or kick start new ideas! If you have any questions or suggestions feel free to reach out to us at info@tribedance.net.",
+            'permalink' => '',
+            'isLink' => 'false',
+            ])
+            @endblock2
+            {{--            link: flase--}}
+        </div>
 
 
         <div class="flex gap-12 ">

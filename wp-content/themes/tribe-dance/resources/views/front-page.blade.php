@@ -107,9 +107,9 @@
         <?php while ( have_rows( 'block1' ) ) : the_row(); ?>
 
 
-            @sectionTitle(
-            [ 'title' => 'LATEST RELEASE' ]
-            ) @endsectionTitle
+{{--            @sectionTitle(--}}
+{{--            [ 'title' => 'LATEST RELEASE' ]--}}
+{{--            ) @endsectionTitle--}}
 
             @block1([
                 'image' => get_sub_field( 'image' ),
@@ -133,10 +133,6 @@
 
     <section class="container mx-auto px-16 mb-24">
 
-        @sectionTitle(
-        [ 'title' => 'LATEST RELEASE' ]
-        ) @endsectionTitle
-
         <?php if ( have_rows( 'block2' ) ) : ?>
         <?php while ( have_rows( 'block2' ) ) : the_row(); ?>
 
@@ -156,9 +152,7 @@
 
 
     <section class="container mx-auto px-16 mb-24">
-        @sectionTitle(
-        [ 'title' => 'LATEST RELEASE' ]
-        ) @endsectionTitle
+
 
         <?php if ( have_rows( 'block3' ) ) : ?>
         <?php while ( have_rows( 'block3' ) ) : the_row(); ?>
@@ -169,14 +163,14 @@
             'excerpt' => get_sub_field( 'text', false, false ),
             'link' => get_sub_field( 'link' )
             ])
-            @endblock1
+            @endblock2
 
         <?php endwhile; ?>
         <?php endif; ?>
     </section>
 
 
-    <section class="container mx-auto px-16">
+    <section class="container mx-auto px-16 mb-8 lg:mb-44">
 
         @sectionTitle(
         [ 'title' => 'Blog' ]

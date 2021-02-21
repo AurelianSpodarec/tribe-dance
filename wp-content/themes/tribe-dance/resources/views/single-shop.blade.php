@@ -25,32 +25,9 @@
 
                         <span class="mb-8 block text-2xl">£ {{ number_format(get_field('price', get_the_ID()), 2) }}</span>
 
-                        <a class="w-full text-center gumroad-button" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>
+                        <a class="w-full text-center gumroad-button mb-8" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>
 
                     </header>
-
-                    <div class="my-10">
-                        <h3>Specifications</h3>
-                        <?php if ( $spec = get_sub_field( 'spec' ) ) : ?>
-                            <?php echo esc_html( $spec ); ?>
-                        <?php endif; ?>
-
-                            <?php
-                            if( have_rows('specifications') ):
-
-                            // Loop through rows.
-                            while( have_rows('specifications') ) : the_row(); ?>
-                            <div>
-                                {{ get_sub_field('spec') }}
-                            </div>
-                            <?php
-                            endwhile;
-                            else :
-                                echo "No Specifications";
-                            endif;
-                        ?>
-                    </div>
-                    {{--                tags --}}
 
                     <div class="prose lg:prose-xl">
                         @php the_content() @endphp

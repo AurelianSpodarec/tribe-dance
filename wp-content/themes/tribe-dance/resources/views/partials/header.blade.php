@@ -71,7 +71,7 @@
 </header>
 
 
-<div class="js-mobileNavMenu transform translate-x-full overflow-y-auto transition duration-500 ease-in-out fixed h-full right-0 top-0 bottom-0 z-30 bg-white lg:hidden" style="width: 85%;">
+<div class="js-mobileNavMenu transform translate-x-full overflow-y-auto transition duration-500 ease-in-out fixed h-full right-0 top-0 bottom-0 z-50 bg-white lg:hidden" style="width: 85%;">
 
     <div class="w-full js-buttonNavMenuClose">
         <svg class="w-16 h-16 p-5 ml-auto" aria-hidden="true" focusable="false" data-prefix="far" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"></path></svg>

@@ -9,7 +9,7 @@
         <time class="text-xs mb-4 block" datetime="$date">{{ $date }}</time>
         <h3 class="font-bold mb-3 text-3xl">{{ $title }}</h3>
         <p class="mb-3 text-sm">{{ $excerpt }}</p>
-        <a class="underline font-bold text-xs uppercase tracking-three" href="{{ $permalink }}">Read More</a>
+        <a class="underline font-bold text-xs uppercase" href="{{ $permalink }}">Read More</a>
     </div>
 
 </a>

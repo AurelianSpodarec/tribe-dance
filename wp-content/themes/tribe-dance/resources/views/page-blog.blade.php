@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class="container mx-auto px-16">
+    <section class="container mx-auto px-16 mb-20 lg:mb-44">
         @pageTitle(
         [ 'title' => 'Blog' ]
         ) @endpageTitle
@@ -22,5 +22,6 @@
         </div>
 
     </section>
+
 
 @endsection

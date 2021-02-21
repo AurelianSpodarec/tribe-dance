@@ -88,17 +88,17 @@ class NavWalker extends \Walker_Nav_Menu {
 
         if (is_home()) {
             if ( $item->is_subitem ) {
-                $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+                $item_html = str_replace( '<a', '<a class="nav-mobile dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
                 $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
             } else {
-                $item_html = str_replace( '<a', '<a  class="nav-link text-white tracking-three py-2 px-3 text-sm hover:text-black"', $item_html );
+                $item_html = str_replace( '<a', '<a  class="nav-mobile text-white tracking-three py-2 px-3 text-sm hover:text-black"', $item_html );
             }
         } else {
             if ( $item->is_subitem ) {
-                $item_html = str_replace( '<a', '<a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+                $item_html = str_replace( '<a', '<a class="nav-mobile dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
                 $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
             } else {
-                $item_html = str_replace( '<a', '<a  class="nav-link text-black lg:text-white tracking-three block py-2 lg:py-2 lg:px-3 text-sm hover:text-white lg:hover:text-gray-300"', $item_html );
+                $item_html = str_replace( '<a', '<a  class="nav-mobile text-black lg:text-white tracking-three block py-2 lg:py-2 lg:px-3 text-sm lg:hover:text-white lg:hover:text-gray-300"', $item_html );
             }
         }
 
