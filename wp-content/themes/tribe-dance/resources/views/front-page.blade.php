@@ -59,8 +59,8 @@
         @block([
             'image' => get_sub_field( 'image' ),
             'title' => esc_html(get_sub_field( 'title' )),
-            'excerpt' => get_sub_field( 'text' ),
-            'link' => esc_url( $link_url ),
+            'excerpt' => get_sub_field( 'text', false, false ),
+            'link' => get_sub_field( 'link' ),
         ])
         @endblock
 
@@ -114,8 +114,8 @@
             @block1([
                 'image' => get_sub_field( 'image' ),
                 'title' => esc_html(get_sub_field( 'title' )),
-                'excerpt' => get_sub_field( 'text' ),
-                'link' => esc_url( $link_url ),
+                'excerpt' => get_sub_field( 'text', false, false ),
+                'link' => get_sub_field( 'link' ),
                 'reverse' => true,
             ])
             @endblock1
@@ -143,8 +143,8 @@
             @block1([
             'image' => get_sub_field( 'image' ),
             'title' => esc_html(get_sub_field( 'title' )),
-            'excerpt' => get_sub_field( 'text' ),
-            'link' => esc_url( $link_url ),
+            'excerpt' => get_sub_field( 'text', false, false ),
+            'link' =>  get_sub_field( 'link' )
             ])
             @endblock1
 
@@ -166,8 +166,8 @@
 
             @block2([
             'title' => esc_html(get_sub_field( 'title' )),
-            'excerpt' => get_sub_field( 'text' ),
-            'link' => esc_url( $link_url )
+            'excerpt' => get_sub_field( 'text', false, false ),
+            'link' => get_sub_field( 'link' )
             ])
             @endblock1
 
