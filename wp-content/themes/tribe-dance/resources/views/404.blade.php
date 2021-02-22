@@ -4,9 +4,9 @@
     @include('partials.page-header')
 
     @if (!have_posts())
-        <div class="alert alert-warning">
+        <section class="container mx-auto px-16 mb-24 prose">
             {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
-        </div>
+        </section>
         {!! get_search_form(false) !!}
     @endif
 @endsection

@@ -5,6 +5,6 @@
     @include('partials.page-header')
 
         @include('partials.content-page')
-        page
+        
     @endwhile
 @endsection
