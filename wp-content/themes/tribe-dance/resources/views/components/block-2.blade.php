@@ -1,5 +1,8 @@
-<a href="{{ $link }}" class="flex flex-wrap bg-gray-100 {{ !$isLink ? "hover:bg-quad cursor-pointer" : ""}}  {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
-
+<?php if(!$isLink) { ?>
+    <a href="{{ $link }}" class="flex flex-wrap bg-gray-100 {{ !$isLink ? "hover:bg-quad cursor-pointer" : ""}}  {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
+<?php } else{  ?>
+    <div class="flex flex-wrap bg-gray-100 {{ !$isLink ? "hover:bg-quad cursor-pointer" : ""}}  {{ $reverse ?  "flex-row-reverse flex-wrap-reverse lg:flex-nowrap" : "" }}">
+    <?php } ?>
 {{--<a href="{{ $link }}">--}}
 
 
@@ -27,6 +30,8 @@
             </div>
         </div>
 
-
-
-</a>
+<?php if(!$isLink) { ?>
+    </a>
+<?php } else { ?>
+    </div>
+<?php } ?>
