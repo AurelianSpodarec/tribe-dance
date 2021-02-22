@@ -1,5 +1,5 @@
 
-<?php if ( is_front_page() || is_home() ) { ?>
+<?php if ( is_front_page() ) { ?>
        <header class="js-mainHeader transition duration-500 ease-in-out z-40 fixed w-full">
            <?php } else { ?>
         <header class="z-20 relative" style="background-color:  #191919; border-bottom: 1px solid orange;">
