@@ -4,7 +4,7 @@
             <img  style="max-height: 640px;" class="w-full object-cover {{ $reverse ? "xl:pl-36 2xl:pl-44" : "xl:pr-36 2xl:pr-44" }}" src="{{ $image }}" />
         </div>
 
-        <div class="lg:w-1/3">
+        <div class="w-full lg:w-1/3">
             <div class="table h-full">
 
                 <div class="table-cell align-middle p-10 {{ $reverse ? "2xl:pl-20" : "2xl:pr-20"}}">

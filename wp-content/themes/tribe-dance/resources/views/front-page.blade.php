@@ -52,7 +52,7 @@
 
 
         @sectionTitle(
-        [ 'title' => 'LATEST RELEASE' ]
+        [ 'title' => get_sub_field( 'heading_title' ) ]
         ) @endsectionTitle
 
 
@@ -72,15 +72,20 @@
 
     </section>
 
-
-
-
-
-
+    
     <section class="container mx-auto px-16 mb-24">
-        @sectionTitle(
-        [ 'title' => 'Featured' ]
-        ) @endsectionTitle
+
+
+            <?php if ( have_rows( 'featured' ) ) : ?>
+            <?php while ( have_rows( 'featured' ) ) : the_row(); ?>
+
+                @sectionTitle(
+                [ 'title' => get_sub_field( 'heading_title' ) ]
+                ) @endsectionTitle
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+
         <div class="flex gap-12 ">
 
             <?php if ( $query_products_posts->have_posts() ) : while ( $query_products_posts->have_posts() ) : $query_products_posts->the_post(); ?>
@@ -172,9 +177,19 @@
 
     <section class="container mx-auto px-16 mb-8 lg:mb-44">
 
-        @sectionTitle(
-        [ 'title' => 'Blog' ]
-        ) @endsectionTitle
+
+
+        <?php if ( have_rows( 'home_blog' ) ) : ?>
+        <?php while ( have_rows( 'home_blog' ) ) : the_row(); ?>
+
+
+
+            @sectionTitle(
+            [ 'title' => get_sub_field( 'heading_title' ) ]
+            ) @endsectionTitle
+
+        <?php endwhile; ?>
+        <?php endif; ?>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
             @while ($query_blog_posts->have_posts()) @php $query_blog_posts->the_post() @endphp
