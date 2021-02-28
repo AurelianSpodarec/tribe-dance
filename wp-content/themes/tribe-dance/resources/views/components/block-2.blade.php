@@ -21,7 +21,7 @@
 
                     <?php if(!$isLink) : ?>
                         <button class="uppercase text-xs font-semibold underline">
-                            Learn More
+                            {{ $buttonText }}
                         </button>
                     <?php endif; ?>
 

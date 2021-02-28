@@ -60,6 +60,7 @@
             'image' => get_sub_field( 'image' ),
             'title' => esc_html(get_sub_field( 'title' )),
             'excerpt' => get_sub_field( 'text', false, false ),
+            'buttonText' => get_sub_field( 'button_text'),
             'link' => get_sub_field( 'link' ),
         ])
         @endblock
@@ -120,6 +121,7 @@
                 'image' => get_sub_field( 'image' ),
                 'title' => esc_html(get_sub_field( 'title' )),
                 'excerpt' => get_sub_field( 'text', false, false ),
+                'buttonText' => get_sub_field( 'button_text'),
                 'link' => get_sub_field( 'link' ),
                 'reverse' => true,
             ])
@@ -145,6 +147,7 @@
             'image' => get_sub_field( 'image' ),
             'title' => esc_html(get_sub_field( 'title' )),
             'excerpt' => get_sub_field( 'text', false, false ),
+            'buttonText' => get_sub_field( 'button_text'),
             'link' =>  get_sub_field( 'link' )
             ])
             @endblock1
@@ -166,6 +169,7 @@
             @block2([
             'title' => esc_html(get_sub_field( 'title' )),
             'excerpt' => get_sub_field( 'text', false, false ),
+            'buttonText' => get_sub_field( 'button_text'),
             'link' => get_sub_field( 'link' )
             ])
             @endblock2

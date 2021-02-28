@@ -28,7 +28,7 @@
                     <div class="text-center relative z-10 py-4 px-6 text-xs bg-white text-black leading-none whitespace-no-wrap shadow-lg" style="border-radius: 12px;">
                         <span class=" font-bold block text-base mb-1">{{ $avatarName }}</span>
                         <span class="text-base block">
-                            <span class="text-base ">Founder - </span>
+                            <span class="text-base ">{{ $founderTitle  }} - </span>
                             <a class="text-base hover:text-yellow-400" href="mailto:mike@gmail.com">{{ $avatarContact }}</a>
                         </span>
                     </div>

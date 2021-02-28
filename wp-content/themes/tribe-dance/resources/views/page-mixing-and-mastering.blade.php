@@ -17,7 +17,8 @@
             'link' => get_sub_field( 'link' ),
             'avatar' =>  get_sub_field( 'avatar' ),
             'avatarName' => get_sub_field( 'avatar_name' ),
-            'avatarContact' =>  get_sub_field( 'avatar_contact' )
+            'avatarContact' =>  get_sub_field( 'avatar_contact' ),
+            'founderTitle' => get_sub_field( 'avatar_founder_title')
         ])
         @endbannerCall
 

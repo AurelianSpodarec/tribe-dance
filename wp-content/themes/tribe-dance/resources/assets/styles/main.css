@@ -28,6 +28,10 @@ body {
     margin-bottom: 26px;
 }
 
+.prose ul {
+    margin-bottom: 26px;
+}
+
 .prose img,
 .prose iframe {
     width: 100%;
