@@ -44,7 +44,7 @@
     </section>
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6  lg:px-12 xl:16 mb-24">
     <?php if ( have_rows( 'latest_release' ) ) : ?>
     <?php while ( have_rows( 'latest_release' ) ) : the_row(); ?>
 
@@ -73,7 +73,7 @@
     </section>
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6  lg:px-12 xl:16 mb-24">
 
 
             <?php if ( have_rows( 'featured' ) ) : ?>
@@ -107,7 +107,7 @@
     </section>
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6  lg:px-12 xl:16 mb-24">
         <?php if ( have_rows( 'block1' ) ) : ?>
         <?php while ( have_rows( 'block1' ) ) : the_row(); ?>
 
@@ -136,7 +136,7 @@
 
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6  lg:px-12 xl:16 mb-24">
 
         <?php if ( have_rows( 'block2' ) ) : ?>
         <?php while ( have_rows( 'block2' ) ) : the_row(); ?>
@@ -156,7 +156,7 @@
 
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6 lg:px-12 xl:16 mb-24">
 
 
         <?php if ( have_rows( 'block3' ) ) : ?>
@@ -175,7 +175,7 @@
     </section>
 
 
-    <section class="container mx-auto px-16 mb-8 lg:mb-44">
+    <section class="container mx-auto px-6  lg:px-12 xl:16 mb-8 lg:mb-44">
 
 
 

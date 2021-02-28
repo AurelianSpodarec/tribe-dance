@@ -1,4 +1,4 @@
-<div class="prose lg:prose-xl container mx-auto px-16 mb-32">
+<div class="prose lg:prose-xl container mx-auto px-6 lg:px-12 xl:16 mb-32">
     <article @php post_class() @endphp>
 
         <header>

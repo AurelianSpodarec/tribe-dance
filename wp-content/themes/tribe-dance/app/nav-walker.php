@@ -91,7 +91,7 @@ class NavWalker extends \Walker_Nav_Menu {
                 $item_html = str_replace( '<a', '<a class="nav-mobile dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
                 $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
             } else {
-                $item_html = str_replace( '<a', '<a  class="nav-mobile text-white tracking-three py-2 px-3 text-sm hover:text-black"', $item_html );
+                $item_html = str_replace( '<a', '<a  class="nav-mobile text-black lg:text-white tracking-three py-2 px-3 text-sm hover:text-black"', $item_html );
             }
         } else {
             if ( $item->is_subitem ) {

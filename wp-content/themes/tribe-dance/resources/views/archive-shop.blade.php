@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section class="container mx-auto px-16 mb-24">
+    <section class="container mx-auto px-6 lg:px-12 xl:16 mb-24">
 
         @pageTitle(
         [ 'title' => 'Shop' ]

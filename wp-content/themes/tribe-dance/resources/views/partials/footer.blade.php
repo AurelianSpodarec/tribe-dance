@@ -6,7 +6,7 @@
 {{--</section>--}}
 
 <footer class="bg-gray-100">
-<div class="container mx-auto px-16 py-8">
+<div class="container mx-auto px-6 lg:px-12 xl:16 py-8">
 
         <div class="xs:justify-between mx-auto flex xl:flex-wrap sm:p-4 flex-col xl:flex-row items-center relative">
 

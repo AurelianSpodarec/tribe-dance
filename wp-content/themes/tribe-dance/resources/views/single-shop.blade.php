@@ -4,7 +4,7 @@
     @while(have_posts()) @php the_post() @endphp
 
 
-    <div class="my-20 container mx-auto px-16 mb-24">
+    <div class="my-20 container mx-auto px-6 lg:px-12 xl:16 mb-24">
         <article @php post_class() @endphp>
 
 
@@ -23,7 +23,7 @@
                             <p class="text-sm uppercase text-gray-400">{{ App::siteName() }}</p>
                         </div>
 
-                        <span class="mb-8 block text-2xl">£ {{ number_format(get_field('price', get_the_ID()), 2) }}</span>
+                        <span class="mb-8 block text-2xl">€ {{ number_format(get_field('price', get_the_ID()), 2) }}</span>
 
                         <a class="w-full text-center gumroad-button mb-8" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>
 
