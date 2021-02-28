@@ -14,7 +14,7 @@
             </h3>
             <p class="mb-8">{{ $excerpt }}</p>
 
-            <a href="{{ $link }}" target="{{ $linkTarget }}" style="letter-spacing: 1px;" class=" font-bold py-4  px-4 w-full block  text-center lg:inline lg:text-left lg:w-auto ld:px-16 text-xs bg-secondary text-black uppercase hover:bg-white border hover:border-gray-900">
+            <a href="{{ $link }}" target="{{ $linkTarget }}" style="letter-spacing: 1px;" class="block font-bold py-4  px-4 w-full  text-center lg:inline-block lg:text-left lg:w-auto ld:px-16 text-xs bg-secondary text-black uppercase hover:bg-white border hover:border-gray-900">
                 {{ $buttonText }}
             </a>
 

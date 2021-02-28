@@ -26,7 +26,9 @@
                         <span class="mb-8 block text-2xl">€ {{ number_format(get_field('price', get_the_ID()), 2) }}</span>
 
 {{--                        <a class="w-full text-center gumroad-button mb-8" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>--}}
-
+                        <a class="w-full mt-6 text-center mb-8 gumroad-button" target="_blank" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}}">
+                            {!! get_field('gumroad_button', get_the_ID()) !!}
+                        </a>
                     </header>
 
                     <div class="prose lg:prose-xl">
