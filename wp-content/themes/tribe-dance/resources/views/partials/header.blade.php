@@ -97,7 +97,7 @@
                 <?php while ( have_rows( 'general_settings', 'options' ) ) : the_row(); ?>
 
                     <?php if ( $email = get_sub_field( 'email_address', 'options' ) ) : ?>
-                        <a class="font-bold text-lg text-pink-300" href="mailto:<?php echo esc_html( $email); ?>">{{ $email }}</a>
+                        <a class="font-bold text-lg" style="color: #ffc706;" href="mailto:<?php echo esc_html( $email); ?>">{{ $email }}</a>
                     <?php endif; ?>
 
                 <?php endwhile; ?>

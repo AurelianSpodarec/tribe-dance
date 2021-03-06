@@ -20,23 +20,43 @@
                     <header>
                         <div class="mb-8">
                             <h1 class="mb-2 uppercase text-2xl lg:text-5xl font-semibold">{!! get_the_title() !!}</h1>
-                            <p class="text-sm uppercase text-gray-400">{{ App::siteName() }}</p>
+                            <p class="text-sm uppercase text-gray-400"></p>
+
+                        <?php $tags = get_tags(); ?>
+
+                            <div class="tags">
+                                <?php foreach ( $tags as $tag ) { ?>
+                                  <div class="text-sm uppercase text-gray-400 inline-block" rel="tag">#<?php echo $tag->name; ?></div>
+                                <?php } ?>
+                            </div>
                         </div>
 
                         <span class="mb-8 block text-2xl">€ {{ number_format(get_field('price', get_the_ID()), 2) }}</span>
 
 {{--                        <a class="w-full text-center gumroad-button mb-8" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>--}}
-                        <a class="w-full mt-6 text-center mb-8 gumroad-button" target="_blank" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}}">
-                            {!! get_field('gumroad_button', get_the_ID()) !!}
-                        </a>
+                        <div class="mb-8"
+                             data-outbound-embed="true">
+                            <a class="w-full text-center gumroad-button" target="_blank" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}"> {!! get_field('gumroad_button', get_the_ID()) !!}</a>
+                        </div>
+
+
+{{--                        <div class="gumroad-product-embed" data-gumroad-product-id="westcoasthousevol1" data-outbound-embed="true">--}}
+{{--                            <a class="w-full mt-6 text-center gumroad-button" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}"> {!! get_field('gumroad_button', get_the_ID()) !!}</a>--}}
+{{--                        </div>--}}
+
                     </header>
 
                     <div class="prose lg:prose-xl">
                         @php the_content() @endphp
 {{--                        <a class="w-full mt-6 text-center gumroad-button" href="https://gum.co/{!! get_field('gumroad_button', get_the_ID()) !!}">Buy Now</a>--}}
-                        <a class="w-full mt-6 text-center gumroad-button" target="_blank" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}}">
-                            {!! get_field('gumroad_button', get_the_ID()) !!}
-                        </a>
+
+
+                            <div class="gumroad-product-embed"
+                                 data-gumroad-product-id="westcoasthousevol1"
+                                 data-outbound-embed="true">
+                                <a class="w-full mt-6 text-center gumroad-button" target="_blank" href="{!! get_field('gumroad_button_link', get_the_ID()) !!}"> {!! get_field('gumroad_button', get_the_ID()) !!}</a>
+                            </div>
+
                     </div>
                 </div>
 
@@ -63,7 +83,6 @@
                 @endwhile
                 </div>
             </div>
-
 
 
             <footer>

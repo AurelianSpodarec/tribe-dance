@@ -2,7 +2,11 @@
 <article @php post_class() @endphp>
 
     <header>
-        <h1 class="mb-2 uppercase text-2xl lg:text-5xl font-semibold mb-12">{!! get_the_title() !!}</h1>
+{{--        <h1 class="mb-2 uppercase text-2xl lg:text-5xl font-semibold mb-12">{!! get_the_title() !!}</h1>--}}
+
+        @pageTitle(
+        [ 'title' => get_the_title() ]
+        ) @endpageTitle
     </header>
 
     <div class="prose lg:prose-xl entry-content">

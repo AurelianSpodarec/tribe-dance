@@ -1,7 +1,7 @@
 <a href="{{ $link }}" class="flex flex-wrap bg-gray-100 hover:bg-quad cursor-pointer {{ $reverse ?  "lg:flex-row-reverse lg:flex-wrap-reverse lg:flex-nowrap" : "" }}">
 
         <div class="w-full lg:w-2/3">
-            <img  style="max-height: 640px;" class="w-full object-cover h-full {{ $reverse ? "xl:pl-0 2xl:pl-44" : "xl:pr-0 2xl:pr-44" }}" src="{{ $image }}" />
+            <img  style="max-height: 640px;" class="w-full object-cover h-full {{ $reverse ? "xl:pl-0 2xl:pl-8" : "xl:pr-0 2xl:pr-8" }}" src="{{ $image }}" />
         </div>
 
         <div class="w-full lg:w-1/3">

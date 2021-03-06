@@ -7,10 +7,49 @@ body {
     word-break: break-word;
 }
 
+
+.nav-item.active a{
+    color: #ffd4a0;
+}
+
 .prose {
     font-size: 18px;
     line-height: 37px;
     max-width: 1070px;
+}
+
+.gumroad-button {
+    background-color: white !important;
+    background-image: url(https://gumroad.com/button/button_bar.jpg) !important;
+    background-repeat: repeat-x !important;
+    border-radius: 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 2px !important;
+    color: #999 !important;
+    display: inline-block !important;
+    font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 50px !important;
+    padding: 0 15px !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+}
+
+.wp-block-separator.is-style-default {
+    width: 45px!important;
+    margin: 70px auto!important;
+    display: block!important;
+    height: 3px;
+    background-color: #b69670;
+}
+
+.wp-block-separator.is-style-wide {
+    margin: 70px 0!important;
+    display: block!important;
+    width: 100%!important;
+    height: 3px;
+    background-color: #b69670;
 }
 
 .prose p {
@@ -28,8 +67,11 @@ body {
     margin-bottom: 26px;
 }
 
-.prose ul {
+.prose ul,
+.prose ol {
     margin-bottom: 26px;
+    list-style: inherit;
+    padding: 0 0 0 20px;
 }
 
 .prose img,
